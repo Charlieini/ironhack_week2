@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Calculator</title>
+</head>
+<body>
+  <h1>Online calculator</h1>
+  <form action="/calculate" method="POST">
+  <input type="number" name="first_number" placeholder="1st number"> +
+  <input type="number" name="second_number" placeholder="2nd number">
+  <button type="submit" name="operator" value="+">Add!</button> 
+  <button type="submit" name="operator" value="-">Substract!</button>
+  <button type="submit" name="operator" value="*">Multiply!</button>
+  <button type="submit" name="operator" value="/">Divide!</button> 
+  <button type="submit" name="operator" value="memorize">Memory</button> 
+  <button type="submit" name="operator" value="memo">Memo</button> 
+  </form>
+  <p><%= @result %></p>
+</body>
+</html>
