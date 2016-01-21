@@ -1,5 +1,4 @@
 
-
 class Task
     attr_reader :content, :id, :completed
     @@current_id = 1
@@ -25,43 +24,50 @@ class Task
     end
 
     def update_content(new_content)
-    	@updated_at = Time.new
+    	log_update
     	@content = new_content
     end
 
-end
-
-class TodoList
-    attr_reader :tasks
-    def initialize
-        @tasks = []
+    def log_update
+        @updated_at = Time.new
     end
 
-    def add_task(task)
-    	@tasks.push(task)
-    end
-
-    def delete_task(id)
-    	@tasks.delete_if{|task| task.id == id}
-    end
-
-    def find_task_by_id(id)
-    	n = @tasks.find_index {|item| item.id == id}
-    	if n == nil
-    		puts "nil!"
-    	else
-    	@tasks[n]
-    	end
-    end
 
 end
 
+# class TodoList
 
-todo_list = TodoList.new
-todo_list.add_task(Task.new("Walk the dog"))
-todo_list.add_task(Task.new("Buy the milk"))
-task = todo_list.find_task_by_id(1)
-puts task.content
+#     attr_reader :tasks
+#     def initialize(user)
+#         @tasks = []
+#         @user = user
+#     end
+
+#     def add_task(task)
+#     	@tasks << task 
+#     end
+
+#     def delete_task(id)
+#     	@tasks.delete_if{|task| task.id == id}
+#     end
+
+#     def find_task_by_id(id)
+#     	n = @tasks.find_index {|item| item.id == id}
+#     	if n == nil
+#     		puts "nil!"
+#     	else
+#     	tasks[n]
+#     	end
+#     end
+# end
+
+
+# todo_list = TodoList.new
+# todo_list.add_task(Task.new("Walk the dog"))
+# todo_list.add_task(Task.new("Buy the milk"))
+# task = todo_list.find_task_by_id(1)
+# puts task.content
+# puts task.id
 
 
 

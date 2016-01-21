@@ -1,5 +1,5 @@
 require 'rspec'
-require './ToDoList.rb'
+require './ToDoList'
 
 	describe "#ToDolist" do 
 		before :each do 
@@ -46,19 +46,17 @@ require './ToDoList.rb'
 			end
 		end
 
-		describe "#find_task_by_id" do
-			it "Find a task by ID" do
-			# @todo.add_task(Task.new("Dale!"))
-			expect(@todo.find_task_by_id(71)).to eq(@todo.tasks[0])
-		end
-	end
+	# 	describe "#find_task_by_id" do
+	# 		it "Find a task by ID" do
+	# 		expect(@todo.find_task_by_id(71)).to eq(@todo.tasks[0])
+	# 	end
+	# end
 
 		describe "#find_task_by_id" do
 			it "Find a task by ID" do
 			expect(@todo.find_task_by_id(100000)).to eq(nil)
 		end
 	end
-
-	describe "#sorted_by_created"
+	# describe "#sorted_by_created"
 end
 

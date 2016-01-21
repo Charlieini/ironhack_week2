@@ -21,6 +21,8 @@ post "/calculate" do
 		destination_file = "./public/memo.txt"
 		IO.write(destination_file,@@memo)
 	elsif operator == :memo
+		file = "./public/memo.txt"
+		@first = IO.read(file)
 		
 	else
 

@@ -5,8 +5,9 @@
 </head>
 <body>
   <h1>Online calculator</h1>
+  <img src="http://openphoto.net/gallery/image/view/20496">
   <form action="/calculate" method="POST">
-  <input type="number" name="first_number" placeholder="1st number"> +
+  <input type="number" name="first_number" placeholder="1st number" value="<%= @first unless @first.nil? %>" 
   <input type="number" name="second_number" placeholder="2nd number">
   <button type="submit" name="operator" value="+">Add!</button> 
   <button type="submit" name="operator" value="-">Substract!</button>
