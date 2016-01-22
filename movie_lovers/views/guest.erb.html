@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+   	<ul>
+   		<% @blog1.each do |task| %>
+
+   		<li><a href="/post_details/<%= @blog1.index(task) %>"><%= task.title %></a></li>
+   		<%end%>
+   	</ul>
+  </body>
+</html>
