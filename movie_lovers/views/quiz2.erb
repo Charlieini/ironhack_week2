@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+  <p>year <%= @year %>?</p>
+    <ul>
+      <% @selected.each do |film| %>
+      <li><img src="<%= film.poster %>" width="100" height ="100">
+      <form action="/guest" method="post">
+      <button type="submit" name="choose" value="<%=film.id%>">
+      choose
+      <input type="hidden" name="correct" value="<%= film.year %>">
+      </button>
+      </form>
+      </li>
+      <%end%>
+    </ul>
+  </body>
+</html>
